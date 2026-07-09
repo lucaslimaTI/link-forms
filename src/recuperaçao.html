@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formulários Conselho</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#f4f7fb,#dbe7f5);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+
+    background:white;
+    width:100%;
+    max-width:500px;
+
+    border-radius:20px;
+    padding:40px 30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:180px;
+    height:180px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    border:2px dashed #bdbdbd;
+    border-radius:15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#888;
+    font-size:15px;
+
+    overflow:hidden;
+
+}
+
+.logo img{
+
+    width:100%;
+    height:100%;
+    object-fit:contain;
+
+}
+
+h1{
+
+     background:linear-gradient(135deg,#174b84,#1ab6ff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+    color:transparent;
+    margin-bottom:35px;
+    font-size:32px;
+
+}
+
+.botoes{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+
+.botao{
+
+    position: relative;
+
+    text-decoration:none;
+    color:#141414;
+
+    padding:18px;
+
+    border-radius:80px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:2px solid transparent;
+
+    background:
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg,#174b84,#1ab6ff) border-box;
+
+    transition:all .35s ease;
+
+}
+.botao:hover{
+
+    color:white;
+
+    background:
+        linear-gradient(135deg,#174b84,#3b82f6) padding-box,
+        linear-gradient(135deg,#174b84,#3b82f6) border-box;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(23,75,132,.30);
+
+}
+.botao:active{
+
+    transform:scale(.98);
+
+}
+
+@media(max-width:480px){
+
+    .container{
+
+        padding:30px 20px;
+
+    }
+
+    h1{
+
+        font-size:26px;
+
+    }
+
+    .botao{
+
+        font-size:17px;
+        padding:16px;
+
+    }
+
+    .logo{
+
+        width:120px;
+        height:120px;
+
+    }
+    
+}
+.subtitulo{
+
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.6;
+    margin-top:-25px;
+    margin-bottom:35px;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Substitua pelo caminho da logo -->
+     
+    <div class="logo">
+
+        <img src="logo_cmpc.png" alt="Logo da empresa">
+        
+    </div>
+
+    <h1>Formulários Conselho</h1>
+<p class="subtitulo">
+    Clique no botão abaixo para ser direcionado a um dos formulários:
+</p>
+    <div class="botoes">
+
+        <a href="#" class="botao">
+            Formulário para Candidatos
+            
+        </a>
+
+        <a href="#" class="botao">
+            Formulário para Votantes                 
+            
+        </a>
+        <!--
+            <a href="#" class="botao">
+                Formulário 3
+            </a>
+        -->
+    </div>
+
+</div>
+
+</body>
+</html>
