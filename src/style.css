@@ -260,3 +260,347 @@
             }
 
         }
+       /*==================================================
+            MENU CANDIDATOS
+==================================================*/
+
+.menu-candidatos{
+
+    width:100%;
+
+}
+
+.botao-menu {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    padding: 18px 60px 18px 25px;
+
+}
+
+.botao-menu span{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.seta {
+
+    position: absolute !important;
+
+    right: 30px;
+
+    transition: .35s ease;
+
+}
+.menu-candidatos.ativo .seta{
+
+    transform:rotate(180deg);
+
+}
+/*==================================================
+                SUBMENU
+==================================================*/
+
+.submenu{
+
+    max-height:0;
+
+    
+
+    opacity:0;
+
+    transition:
+
+        max-height .35s ease,
+
+        opacity .25s ease;
+
+}
+
+.menu-candidatos.ativo .submenu{
+
+    max-height:500px;
+
+    opacity:1;
+
+    margin-top:12px;
+
+}
+/*==================================================
+            ITENS DO SUBMENU
+==================================================*/
+
+.submenu-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    transition:.25s;
+
+    min-height:60px;
+
+}
+
+.submenu-item a:hover{
+
+    background:rgba(26,182,255,.08);
+
+}
+.submenu-item a{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 20px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+.submenu-item a i{
+
+    width:22px;
+
+    text-align:center;
+
+    color:#1ab6ff;
+
+}
+.btn-info{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:#1ab6ff;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+.btn-info:hover{
+
+    background:#1ab6ff;
+
+    color:white;
+
+    transform:scale(1.1);
+
+}
+@media(max-width:480px){
+
+    .submenu-item{
+
+        padding:16px;
+
+    }
+
+    .submenu-item a{
+
+        font-size:16px;
+
+    }
+
+    .btn-info{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==================================================
+                    MODAL
+==================================================*/
+
+.modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.30s ease;
+
+    z-index:9999;
+
+}
+
+.modal.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+.modal-content{
+
+    position:relative;
+
+    width:100%;
+    max-width:500px;
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    animation:modalEntrada .30s ease;
+
+}
+
+@keyframes modalEntrada{
+
+    from{
+
+        transform:translateY(20px) scale(.95);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0) scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.modal-content h2{
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.modal-content p{
+
+    color:var(--sub);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+.fechar-modal{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.25s;
+
+}
+
+.fechar-modal:hover{
+
+    background:#ef4444;
+
+    color:white;
+
+    transform:rotate(90deg);
+
+}
+
+@media(max-width:480px){
+
+    .modal-content{
+
+        padding:22px;
+
+    }
+
+    .modal-content h2{
+
+        font-size:20px;
+
+    }
+
+    .modal-content p{
+
+        font-size:15px;
+
+    }
+
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários Conselho</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" type="image/png" href="src/logo_cmpc_nodesc.png">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button id="theme" class="theme">🌙</button>
+
+        <div class="logo">
+
+            <img src="src/logo_cmpc.png" alt="Logo">
+
+        </div>
+
+        <h1>Formulários Conselho</h1>
+
+        <p class="subtitulo">
+            Clique no botão abaixo para ser direcionado a um dos formulários:
+        </p>
+
+        <div class="botoes">
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8Qc-hMnCzj8ydBuwEIsHsMUwa6RDsNFx0l2xcfmqvAFTIZQ/viewform?usp=dialog" target="_blank"
+   rel="noopener noreferrer" class="botao">
+                Formulário para Candidatos
+            </a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8Qc-hMnCzj8ydBuwEIsHsMUwa6RDsNFx0l2xcfmqvAFTIZQ/viewform?usp=dialog" target="_blank"
+   rel="noopener noreferrer" class="botao">
+                Formulário para Votantes
+            </a>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const b = document.getElementById('theme');
+
+        const saved = localStorage.getItem('tema');
+
+        if (saved === 'dark') {
+
+            document.body.classList.add('dark');
+            b.textContent = '☀️';
+
+        }
+
+        b.onclick = () => {
+
+            document.body.classList.toggle('dark');
+
+            const dark = document.body.classList.contains('dark');
+
+            b.textContent = dark ? '☀️' : '🌙';
+
+            localStorage.setItem('tema', dark ? 'dark' : 'light');
+
+        };
+
+    </script>
+
+</body>
+
+</html>
