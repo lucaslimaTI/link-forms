@@ -349,13 +349,15 @@
 
     justify-content:space-between;
 
-    border-radius:14px;
+    border-radius:50px;
 
     background:var(--card);
 
     transition:.25s;
 
     min-height:60px;
+    border:1px solid #1ab6ff3d;
+    
 
 }
 
