@@ -114,5 +114,20 @@ document.addEventListener("keydown",(e)=>{
         modal.classList.remove("show");
 
     }
+    
+
+});
+const texto = document.getElementById("btnCandidatos");
+btnCandidatos.addEventListener("click", () => {
+
+    submenu.classList.toggle("ativo");
+
+    const aberto = submenu.classList.contains("ativo");
+
+    texto.textContent = aberto
+        ? "Ocultar Formulários"
+        : "Formulário para Candidatos";
+
+    seta.classList.toggle("rotacionar", aberto);
 
 });
