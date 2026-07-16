@@ -466,13 +466,14 @@
 
     background:rgba(0,0,0,.45);
 
-    
-
     display:flex;
     justify-content:center;
-    align-items:center;
 
-    padding:20px;
+    align-items:flex-start;
+
+    padding:30px 20px;
+
+    overflow-y:auto;
 
     opacity:0;
     visibility:hidden;
@@ -481,12 +482,7 @@
 
     z-index:9999;
 
-     max-height:90vh;
-    overflow-y:auto;
-
-        
 }
-
 .modal.show{
 
     opacity:1;
@@ -510,6 +506,10 @@
     box-shadow:var(--shadow);
 
     animation:modalEntrada .30s ease;
+
+    max-height:calc(100vh - 60px);
+
+    overflow-y:auto;
 
 }
 
